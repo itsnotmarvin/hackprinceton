@@ -98,3 +98,30 @@
 .risk-medium { background: var(--maybe-soft); color: var(--maybe); }
 .risk-high { background: var(--pass-soft); color: var(--pass); }
 .sources li { margin-top: 4px; }
+
+/* parcel heading */
+.parcel-title p { margin: 4px 0 0; }
+
+/* price bar */
+.pricebar-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.pricebar-head h2 { margin: 0; }
+.pricebar-ok { color: var(--buy); font-weight: 600; font-size: 14px; }
+.pricebar-over { color: var(--pass); font-weight: 600; font-size: 14px; }
+.pricebar-track {
+  position: relative; height: 14px; margin: 44px 0 36px;
+  background: var(--pass-soft); border-radius: 99px;
+}
+.pricebar-good { position: absolute; inset: 0 auto 0 0; background: var(--buy-soft); border-radius: 99px 0 0 99px; border-right: 2px solid var(--buy); }
+.pricebar-max, .pricebar-ask { position: absolute; top: 0; height: 100%; }
+.pricebar-max span, .pricebar-ask span {
+  position: absolute; transform: translateX(-50%); white-space: nowrap; font-size: 12px; font-weight: 650;
+}
+.pricebar-max span { top: 22px; color: var(--buy); }
+.pricebar-ask::before {
+  content: ''; position: absolute; left: -9px; top: -5px; width: 18px; height: 18px;
+  border-radius: 50%; background: var(--surface); border: 4px solid var(--text);
+}
+.pricebar-ask.ok::before { border-color: var(--buy); }
+.pricebar-ask.over::before { border-color: var(--pass); }
+.pricebar-ask span { bottom: 24px; color: var(--text); }
+.pricebar p { margin: 0; }

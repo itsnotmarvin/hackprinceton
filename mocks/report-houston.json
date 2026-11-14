@@ -1,0 +1,19 @@
+{
+  "_mock": "Hand-written mock report. Not real research.",
+  "report_id": "mock-houston",
+  "status": "done",
+  "site": { "kind": "region", "id": "houston", "name": "Houston, TX" },
+  "summary": "Houston is the lowest-cost option for 100 MW by 2029. Cheap power and a strong trades workforce outweigh summer water stress and a crowded pipeline of planned projects.",
+  "sections": [
+    { "topic": "power", "finding": "Industrial power is cheap; typical interconnection wait is about 2.5 years.", "risk": "low",
+      "sources": [{ "title": "EIA Electric Power Monthly (example)", "url": "https://www.eia.gov/electricity/monthly/" }] },
+    { "topic": "water", "finding": "Medium-high summer water stress; dry cooling is a hedge.", "risk": "medium",
+      "sources": [{ "title": "WRI Aqueduct (example)", "url": "https://www.wri.org/aqueduct" }] },
+    { "topic": "land", "finding": "Industrial land east of the city is plentiful and mostly above flood terrain.", "risk": "low",
+      "sources": [{ "title": "CoStar market overview (example)", "url": "https://www.costar.com/" }] },
+    { "topic": "community", "finding": "Nine projects already planned in the region; crowding may raise power prices.", "risk": "medium",
+      "sources": [{ "title": "Data Center Watch (example)", "url": "https://www.datacenterwatch.org/" }] }
+  ],
+  "changes_since_last": [],
+  "generated_at": "2026-11-14T00:00:00Z"
+}

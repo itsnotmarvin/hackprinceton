@@ -1,5 +1,7 @@
-import { Link, useLocation, useParams } from 'react-router-dom'
-import { getRegion } from '../../shared/api'
+import { useState } from 'react'
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
+import { getRegion, investigate } from '../../shared/api'
+import { usePageTitle } from './usePageTitle'
 import { fromQuery, toQuery } from '../../shared/search'
 import { useAsync } from '../../shared/useAsync'
 import { liters, num, usd } from '../../shared/format'
@@ -12,7 +14,10 @@ export function RegionPage() {
   const { id = '' } = useParams()
   const { search } = useLocation()
   const req = fromQuery(search)
+  const navigate = useNavigate()
   const state = useAsync(() => getRegion(id, req), [id, search])
+  const [starting, setStarting] = useState(false)
+  usePageTitle(state.status === 'ok' ? state.data.name : undefined)
 
   if (state.status === 'loading') return <Loading text="Running the numbers…" />
   if (state.status === 'error') return <ErrorState error={state.error} />
@@ -20,6 +25,16 @@ export function RegionPage() {
   const b = r.breakdown
   const q = toQuery(req)
   const isOrbit = r.id === 'orbit'
+
+  async function onInvestigate() {
+    setStarting(true)
+    try {
+      const { report_id } = await investigate('region', r.id)
+      navigate(`/report/${report_id}?${q}`)
+    } finally {
+      setStarting(false)
+    }
+  }
 
   return (
     <div className="detail">
@@ -40,7 +55,12 @@ export function RegionPage() {
             <span className="small">score</span>
           </div>
         )}
-        <HeartButton kind="region" id={r.id} name={r.name} current={{ score: r.score }} />
+        <div className="actions">
+          <HeartButton kind="region" id={r.id} name={r.name} current={{ score: r.score }} />
+          <button className="btn btn-primary" onClick={onInvestigate} disabled={starting}>
+            {starting ? 'Starting…' : 'Investigate'}
+          </button>
+        </div>
       </header>
 
       <section className="card">
@@ -90,7 +110,7 @@ export function RegionPage() {
           <ul className="parcel-list">
             {r.parcels.map((p) => (
               <li key={p.id}>
-                <Link to={`/parcel/${p.id}?${q}`}>
+                <Link to={`/parcel/${p.id}?${q}`} state={{ name: p.name }}>
                   <span>{p.name}</span>
                   <VerdictBadge verdict={p.verdict} />
                 </Link>

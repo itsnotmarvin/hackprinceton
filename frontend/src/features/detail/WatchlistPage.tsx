@@ -5,6 +5,7 @@ import { useAsync } from '../../shared/useAsync'
 import { VerdictBadge } from '../../shared/components/VerdictBadge'
 import { ErrorState, Loading } from '../../shared/components/States'
 import type { WatchItem } from '../../shared/types'
+import { usePageTitle } from './usePageTitle'
 import './detail.css'
 
 const hrefFor = (i: WatchItem) => `/${i.kind}/${i.id}`
@@ -12,6 +13,7 @@ const hrefFor = (i: WatchItem) => `/${i.kind}/${i.id}`
 export function WatchlistPage() {
   const [version, setVersion] = useState(0)
   const state = useAsync(getWatchlist, [version])
+  usePageTitle('Watchlist')
 
   if (state.status === 'loading') return <Loading />
   if (state.status === 'error') return <ErrorState error={state.error} />
@@ -40,7 +42,7 @@ export function WatchlistPage() {
                   {c.direction === 'better' ? '▲' : '▼'}
                 </span>
                 <div>
-                  <Link to={hrefFor(c.item)}>
+                  <Link to={hrefFor(c.item)} state={{ name: c.item.name }}>
                     <strong>{c.item.name}</strong>
                   </Link>
                   <span> {c.text}</span>
@@ -60,7 +62,7 @@ export function WatchlistPage() {
           <ul className="saved">
             {items.map((i) => (
               <li key={i.id}>
-                <Link to={hrefFor(i)} className="saved-name">
+                <Link to={hrefFor(i)} state={{ name: i.name }} className="saved-name">
                   {i.name}
                 </Link>
                 <span className="tag">{i.kind}</span>

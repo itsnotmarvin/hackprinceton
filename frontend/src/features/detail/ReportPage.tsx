@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
-import { Link, useLocation, useParams } from 'react-router-dom'
-import { getReport } from '../../shared/api'
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom'
+import { getReport, investigate } from '../../shared/api'
+import { usePageTitle } from './usePageTitle'
 import { ErrorState } from '../../shared/components/States'
 import type { Report } from '../../shared/types'
 import './detail.css'
@@ -12,6 +13,9 @@ export function ReportPage() {
   const { search } = useLocation()
   const [report, setReport] = useState<Report | null>(null)
   const [error, setError] = useState<Error | null>(null)
+  const [attempt, setAttempt] = useState(0)
+  const navigate = useNavigate()
+  usePageTitle(report?.status === 'done' ? `Report · ${report.site.name}` : 'Investigating…')
 
   // Poll until the agent is done or failed. Never block the page on it.
   useEffect(() => {
@@ -32,7 +36,7 @@ export function ReportPage() {
       live = false
       clearTimeout(timer)
     }
-  }, [id])
+  }, [id, attempt])
 
   if (error) return <ErrorState error={error} />
 
@@ -51,11 +55,26 @@ export function ReportPage() {
   }
 
   if (report.status === 'failed') {
+    const site = report.site
+    const retry = async () => {
+      const { report_id } = await investigate(site.kind, site.id)
+      setReport(null)
+      navigate(`/report/${report_id}${search}`, { replace: true })
+      setAttempt((a) => a + 1)
+    }
     return (
       <div className="detail">
         <div className="card">
           <h2>The investigation didn't finish</h2>
-          <p className="muted">Try again in a minute. The site's numbers above are still valid.</p>
+          <p className="muted">The site's numbers are still valid. You can run the research again.</p>
+          <div className="actions">
+            <button className="btn btn-primary" onClick={retry}>
+              Try again
+            </button>
+            <Link className="btn" to={`/${site.kind}/${site.id}${search}`}>
+              Back to {site.name}
+            </Link>
+          </div>
         </div>
       </div>
     )

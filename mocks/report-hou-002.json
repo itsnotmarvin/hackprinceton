@@ -1,0 +1,19 @@
+{
+  "_mock": "Hand-written mock report. Not real research.",
+  "report_id": "mock-hou-002",
+  "status": "done",
+  "site": { "kind": "parcel", "id": "hou-002", "name": "Pasadena rail-side lot" },
+  "summary": "Maybe. The site works, but the asking price of $240,000 per acre is above the $190,000 it is worth; negotiate down or walk away.",
+  "sections": [
+    { "topic": "land", "finding": "38 acres fits 100 MW with little room to expand.", "risk": "medium",
+      "sources": [{ "title": "CoStar listing (example)", "url": "https://www.costar.com/" }] },
+    { "topic": "power", "finding": "Substation 1.4 mi away; Houston-area industrial power is among the cheapest of the candidates.", "risk": "low",
+      "sources": [{ "title": "EIA Electric Power Monthly (example)", "url": "https://www.eia.gov/electricity/monthly/" }] },
+    { "topic": "water", "finding": "Medium-high summer water stress, same as the wider Houston region.", "risk": "medium",
+      "sources": [{ "title": "WRI Aqueduct (example)", "url": "https://www.wri.org/aqueduct" }] },
+    { "topic": "community", "finding": "Nearest homes are 0.6 mi away; no organized opposition found.", "risk": "low",
+      "sources": [{ "title": "Data Center Watch (example)", "url": "https://www.datacenterwatch.org/" }] }
+  ],
+  "changes_since_last": [],
+  "generated_at": "2026-11-14T00:00:00Z"
+}

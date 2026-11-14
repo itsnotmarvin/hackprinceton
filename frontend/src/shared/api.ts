@@ -123,7 +123,8 @@ export async function investigate(kind: 'region' | 'parcel', id: string): Promis
 export async function getReport(reportId: string): Promise<Report> {
   if (MOCK_MODE) {
     await delay(150)
-    const r = mock<Report>('report')
+    // mock ids are "mock-<siteId>"; pre-written reports live in mocks/report-<siteId>.json
+    const r = mock<Report>('report', reportId.replace(/^mock-/, ''))
     r.report_id = reportId
     const started = mockStarted.get(reportId)
     // pretend the agent takes ~3 s the first time it's run this session

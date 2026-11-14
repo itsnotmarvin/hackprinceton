@@ -1,0 +1,19 @@
+{
+  "_mock": "Hand-written mock report. Not real research.",
+  "report_id": "mock-los-angeles",
+  "status": "done",
+  "site": { "kind": "region", "id": "los-angeles", "name": "Los Angeles, CA" },
+  "summary": "Los Angeles ranks low for a 100 MW build by 2029: power is expensive, the grid queue is about four years, and water stress is extreme.",
+  "sections": [
+    { "topic": "power", "finding": "Among the highest industrial power prices of the candidates; interconnection queue near four years.", "risk": "high",
+      "sources": [{ "title": "EIA Electric Power Monthly (example)", "url": "https://www.eia.gov/electricity/monthly/" }] },
+    { "topic": "water", "finding": "Extremely high baseline water stress.", "risk": "high",
+      "sources": [{ "title": "WRI Aqueduct (example)", "url": "https://www.wri.org/aqueduct" }] },
+    { "topic": "land", "finding": "Large industrial parcels are scarce and expensive.", "risk": "high",
+      "sources": [{ "title": "CoStar market overview (example)", "url": "https://www.costar.com/" }] },
+    { "topic": "community", "finding": "Two projects delayed by local opposition since 2024.", "risk": "medium",
+      "sources": [{ "title": "Data Center Watch (example)", "url": "https://www.datacenterwatch.org/" }] }
+  ],
+  "changes_since_last": [],
+  "generated_at": "2026-11-14T00:00:00Z"
+}

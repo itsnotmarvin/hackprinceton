@@ -1,0 +1,19 @@
+{
+  "_mock": "Hand-written mock report. Not real research.",
+  "report_id": "mock-la-001",
+  "status": "done",
+  "site": { "kind": "parcel", "id": "la-001", "name": "Vernon warehouse block" },
+  "summary": "Pass. At 14 acres the lot cannot fit 100 MW, and Los Angeles adds expensive power, a four-year grid queue and extreme water stress.",
+  "sections": [
+    { "topic": "land", "finding": "14 acres in an industrial zone; at least 40 acres is needed for 100 MW with cooling yards.", "risk": "high",
+      "sources": [{ "title": "CoStar listing (example)", "url": "https://www.costar.com/" }] },
+    { "topic": "power", "finding": "Nearest substation is 2.1 mi away and would likely need an upgrade.", "risk": "high",
+      "sources": [{ "title": "EIA Electric Power Monthly (example)", "url": "https://www.eia.gov/electricity/monthly/" }] },
+    { "topic": "water", "finding": "Extremely high baseline water stress; evaporative cooling would face restrictions.", "risk": "high",
+      "sources": [{ "title": "WRI Aqueduct (example)", "url": "https://www.wri.org/aqueduct" }] },
+    { "topic": "community", "finding": "Two regional data center projects were delayed by local opposition since 2024.", "risk": "medium",
+      "sources": [{ "title": "Data Center Watch (example)", "url": "https://www.datacenterwatch.org/" }] }
+  ],
+  "changes_since_last": [],
+  "generated_at": "2026-11-14T00:00:00Z"
+}

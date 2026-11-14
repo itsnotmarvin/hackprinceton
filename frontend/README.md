@@ -45,7 +45,25 @@ Frontend 2 reads it back with `fromQuery(location.search)` and passes it to the 
 ## Mock files
 
 `api.ts` looks for `mocks/<name>-<id>.json` first, then `mocks/<name>.json`.
-For example, `/parcel/la-001` loads `mocks/parcel-la-001.json`, and `/parcel/hou-001` falls back to `mocks/parcel.json`.
+Every region, parcel and report mock is per-id (`region-houston.json`, `parcel-hou-001.json`, `report-hou-001.json`) — the same naming the Data + API mock server (`api/main.py` on Noah) reads.
+
+Reports: Investigate creates report id `mock-<siteId>`, served from `mocks/report-<siteId>.json`
+(pre-written for `hou-001`, `hou-002`, `la-001`, `houston`, `los-angeles`, `orbit`). The first run takes ~3 s so the "running" state is visible.
+
+## Parcel names
+
+The contract's parcel response has no `name`. Links to `/parcel/:id` pass it in router state:
+`<Link to={...} state={{ name: parcel.name }}>`. Without it the page falls back to the address.
+
+## Tests
+
+```bash
+npm test
+```
+
+`src/features/detail/detail.test.ts` checks the price-bar math, the search URL round-trip, mock lookups,
+and that **every mock file matches the contract** (enums, a failed check means Pass, every report finding has a source).
+Data + API can run it against new mock files.
 
 ## Team rules
 - Pull `main` before starting each task.

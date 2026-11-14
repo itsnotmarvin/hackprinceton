@@ -8,6 +8,8 @@ import { HeartButton } from '../../shared/components/HeartButton'
 import { VerdictBadge } from '../../shared/components/VerdictBadge'
 import { ErrorState, Loading } from '../../shared/components/States'
 import type { CheckStatus } from '../../shared/types'
+import { PriceBar } from './PriceBar'
+import { usePageTitle } from './usePageTitle'
 import './detail.css'
 
 const CHECK_LABEL: Record<string, string> = {
@@ -20,21 +22,26 @@ const CHECK_LABEL: Record<string, string> = {
 
 export function ParcelPage() {
   const { id = '' } = useParams()
-  const { search } = useLocation()
+  const { search, state: navState } = useLocation()
   const navigate = useNavigate()
   const req = fromQuery(search)
   const state = useAsync(() => getParcel(id, req), [id, search])
   const [starting, setStarting] = useState(false)
+  // The contract's parcel has no name; the region page passes it along in router state.
+  const passedName = (navState as { name?: string } | null)?.name
+  const p = state.status === 'ok' ? state.data : null
+  const title = passedName ?? p?.address
+  usePageTitle(title)
 
   if (state.status === 'loading') return <Loading text="Checking this parcel…" />
   if (state.status === 'error') return <ErrorState error={state.error} />
-  const p = state.data
+  if (!p) return null
   const q = toQuery(req)
 
   async function onInvestigate() {
     setStarting(true)
     try {
-      const { report_id } = await investigate('parcel', p.id)
+      const { report_id } = await investigate('parcel', p!.id)
       navigate(`/report/${report_id}?${q}`)
     } finally {
       setStarting(false)
@@ -47,17 +54,19 @@ export function ParcelPage() {
         ← Back to region
       </Link>
 
+      <header className="parcel-title">
+        <h1>{title}</h1>
+        {passedName && <p className="muted">{p.address}</p>}
+      </header>
+
       <div className="parcel-grid">
         <AerialImage src={p.image_url} lat={p.lat} lng={p.lng} />
 
         <div className="parcel-side">
-          <div>
-            <p className="muted small">{p.address}</p>
-            <div className="facts">
-              <Fact label="Size" value={`${num(p.acres)} acres`} />
-              <Fact label="Asking price" value={`${usdExact(p.asking_price_per_acre)}/acre`} />
-              <Fact label="Asking total" value={usdExact(p.asking_price_per_acre * p.acres)} />
-            </div>
+          <div className="facts">
+            <Fact label="Size" value={`${num(p.acres)} acres`} />
+            <Fact label="Asking price" value={`${usdExact(p.asking_price_per_acre)}/acre`} />
+            <Fact label="Asking total" value={usdExact(p.asking_price_per_acre * p.acres)} />
           </div>
 
           <div className="verdict-block">
@@ -72,18 +81,19 @@ export function ParcelPage() {
           </div>
 
           <div className="actions">
-            <HeartButton
-              kind="parcel"
-              id={p.id}
-              name={p.address}
-              current={{ verdict: p.verdict }}
-            />
+            <HeartButton kind="parcel" id={p.id} name={title ?? p.id} current={{ verdict: p.verdict }} />
             <button className="btn btn-primary" onClick={onInvestigate} disabled={starting}>
               {starting ? 'Starting…' : 'Investigate this site'}
             </button>
           </div>
         </div>
       </div>
+
+      {p.max_price_per_acre > 0 && (
+        <section className="card">
+          <PriceBar asking={p.asking_price_per_acre} max={p.max_price_per_acre} acres={p.acres} />
+        </section>
+      )}
 
       <section className="card">
         <h2>Site checks</h2>

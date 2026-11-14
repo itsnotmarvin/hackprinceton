@@ -1,0 +1,19 @@
+{
+  "_mock": "Hand-written mock report. Not real research.",
+  "report_id": "mock-orbit",
+  "status": "done",
+  "site": { "kind": "region", "id": "orbit", "name": "Low Earth Orbit" },
+  "summary": "Orbit needs no water, land or grid connection, but launch cost dominates. At today's assumed launch price it trails Houston; it wins only if launch costs fall below the break-even shown on the results page.",
+  "sections": [
+    { "topic": "power", "finding": "Continuous solar power in a dawn-dusk orbit; no grid queue.", "risk": "low",
+      "sources": [{ "title": "Google Project Suncatcher (example)", "url": "https://research.google/" }] },
+    { "topic": "water", "finding": "No water used; heat is rejected by radiators.", "risk": "low",
+      "sources": [{ "title": "Starcloud white paper (example)", "url": "https://www.starcloud.com/" }] },
+    { "topic": "land", "finding": "No land needed; launch capacity is the bottleneck.", "risk": "medium",
+      "sources": [{ "title": "ASCEND study (example)", "url": "https://www.thalesaleniaspace.com/" }] },
+    { "topic": "community", "finding": "No local opposition; space debris and spectrum rules are the open questions.", "risk": "medium",
+      "sources": [{ "title": "ASCEND study (example)", "url": "https://www.thalesaleniaspace.com/" }] }
+  ],
+  "changes_since_last": [],
+  "generated_at": "2026-11-14T00:00:00Z"
+}
