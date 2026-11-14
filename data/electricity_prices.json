@@ -1,0 +1,128 @@
+[
+  {
+    "month": "2026-08",
+    "state": "TX",
+    "sector": "industrial",
+    "usd_per_kwh": 0.0721,
+    "status": "preliminary",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  },
+  {
+    "month": "2025-08",
+    "state": "TX",
+    "sector": "industrial",
+    "usd_per_kwh": 0.0642,
+    "status": "final",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  },
+  {
+    "month": "2026-08",
+    "state": "CA",
+    "sector": "industrial",
+    "usd_per_kwh": 0.2412,
+    "status": "preliminary",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  },
+  {
+    "month": "2025-08",
+    "state": "CA",
+    "sector": "industrial",
+    "usd_per_kwh": 0.2384,
+    "status": "final",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  },
+  {
+    "month": "2026-08",
+    "state": "VA",
+    "sector": "industrial",
+    "usd_per_kwh": 0.0998,
+    "status": "preliminary",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  },
+  {
+    "month": "2025-08",
+    "state": "VA",
+    "sector": "industrial",
+    "usd_per_kwh": 0.094,
+    "status": "final",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  },
+  {
+    "month": "2026-08",
+    "state": "NJ",
+    "sector": "industrial",
+    "usd_per_kwh": 0.1624,
+    "status": "preliminary",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  },
+  {
+    "month": "2025-08",
+    "state": "NJ",
+    "sector": "industrial",
+    "usd_per_kwh": 0.1506,
+    "status": "final",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  },
+  {
+    "month": "2026-08",
+    "state": "AZ",
+    "sector": "industrial",
+    "usd_per_kwh": 0.0973,
+    "status": "preliminary",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  },
+  {
+    "month": "2025-08",
+    "state": "AZ",
+    "sector": "industrial",
+    "usd_per_kwh": 0.0888,
+    "status": "final",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  },
+  {
+    "month": "2026-08",
+    "state": "GA",
+    "sector": "industrial",
+    "usd_per_kwh": 0.1305,
+    "status": "preliminary",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  },
+  {
+    "month": "2025-08",
+    "state": "GA",
+    "sector": "industrial",
+    "usd_per_kwh": 0.082,
+    "status": "final",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  },
+  {
+    "month": "2026-08",
+    "state": "OH",
+    "sector": "industrial",
+    "usd_per_kwh": 0.0975,
+    "status": "preliminary",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  },
+  {
+    "month": "2025-08",
+    "state": "OH",
+    "sector": "industrial",
+    "usd_per_kwh": 0.0847,
+    "status": "final",
+    "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+    "retrieved": "2026-11-13"
+  }
+]

@@ -1,0 +1,816 @@
+[
+  {
+    "id": "houston",
+    "name": "Houston, TX",
+    "kind": "earth",
+    "state": "TX",
+    "lat": 29.76,
+    "lng": -95.37,
+    "has_parcels": true,
+    "electricity_price": {
+      "value": 0.0721,
+      "unit": "USD_per_kWh",
+      "scope": "TX statewide industrial-sector average, not a data-center tariff",
+      "status": "observed",
+      "source": "EIA Electric Power Monthly, Table 5.6.A (industrial sector)",
+      "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+      "period": "2026-08 (preliminary)",
+      "retrieved": "2026-11-13"
+    },
+    "construction_cost": {
+      "value": 10.51,
+      "unit": "USD_per_W_IT",
+      "scope": "Dallas benchmark used as proxy for Houston, TX; ~60 MW air-cooled build-to-suit; EXCLUDES land, utility works, site works, IT equipment, fees",
+      "status": "source_derived",
+      "source": "Turner & Townsend Data Centre Construction Cost Index 2026-27",
+      "source_url": "https://www.turnerandtownsend.com/news/surging-demand-for-ai-drives-race-to-deliver-data-centre-mega-projects/",
+      "period": "2026-27",
+      "retrieved": "2026-11-13"
+    },
+    "cooling": {
+      "water": {
+        "pue": {
+          "value": 1.2,
+          "unit": "ratio",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        },
+        "wue": {
+          "value": 0.2,
+          "unit": "L_per_IT_kWh",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        }
+      },
+      "dry": {
+        "pue": {
+          "value": null,
+          "unit": "ratio",
+          "status": "unknown"
+        },
+        "wue": {
+          "value": null,
+          "unit": "L_per_IT_kWh",
+          "status": "unknown"
+        }
+      }
+    },
+    "grid_wait": {
+      "value": null,
+      "unit": "years",
+      "status": "unknown",
+      "scope": "Time to receive utility power for a new large load",
+      "note": "Berkeley Lab queue data covers generators, not loads; do not substitute."
+    },
+    "risk_inputs": {
+      "water_stress": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown",
+        "source": "WRI Aqueduct 4.0 (not yet extracted)"
+      },
+      "crowding_count": {
+        "value": null,
+        "unit": "count",
+        "status": "unknown",
+        "source": "Epoch AI Frontier Data Centers (not yet pulled)"
+      },
+      "opposition": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown"
+      },
+      "labor": {
+        "value": null,
+        "unit": "category",
+        "status": "unknown",
+        "allowed": [
+          "strong",
+          "adequate",
+          "short"
+        ]
+      }
+    }
+  },
+  {
+    "id": "los-angeles",
+    "name": "Los Angeles, CA",
+    "kind": "earth",
+    "state": "CA",
+    "lat": 34.05,
+    "lng": -118.24,
+    "has_parcels": true,
+    "electricity_price": {
+      "value": 0.2412,
+      "unit": "USD_per_kWh",
+      "scope": "CA statewide industrial-sector average, not a data-center tariff",
+      "status": "observed",
+      "source": "EIA Electric Power Monthly, Table 5.6.A (industrial sector)",
+      "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+      "period": "2026-08 (preliminary)",
+      "retrieved": "2026-11-13"
+    },
+    "construction_cost": {
+      "value": 15.01,
+      "unit": "USD_per_W_IT",
+      "scope": "Silicon Valley benchmark used as proxy for Los Angeles, CA; ~60 MW air-cooled build-to-suit; EXCLUDES land, utility works, site works, IT equipment, fees",
+      "status": "source_derived",
+      "source": "Turner & Townsend Data Centre Construction Cost Index 2026-27",
+      "source_url": "https://www.turnerandtownsend.com/news/surging-demand-for-ai-drives-race-to-deliver-data-centre-mega-projects/",
+      "period": "2026-27",
+      "retrieved": "2026-11-13"
+    },
+    "cooling": {
+      "water": {
+        "pue": {
+          "value": 1.2,
+          "unit": "ratio",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        },
+        "wue": {
+          "value": 0.2,
+          "unit": "L_per_IT_kWh",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        }
+      },
+      "dry": {
+        "pue": {
+          "value": null,
+          "unit": "ratio",
+          "status": "unknown"
+        },
+        "wue": {
+          "value": null,
+          "unit": "L_per_IT_kWh",
+          "status": "unknown"
+        }
+      }
+    },
+    "grid_wait": {
+      "value": null,
+      "unit": "years",
+      "status": "unknown",
+      "scope": "Time to receive utility power for a new large load",
+      "note": "Berkeley Lab queue data covers generators, not loads; do not substitute."
+    },
+    "risk_inputs": {
+      "water_stress": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown",
+        "source": "WRI Aqueduct 4.0 (not yet extracted)"
+      },
+      "crowding_count": {
+        "value": null,
+        "unit": "count",
+        "status": "unknown",
+        "source": "Epoch AI Frontier Data Centers (not yet pulled)"
+      },
+      "opposition": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown"
+      },
+      "labor": {
+        "value": null,
+        "unit": "category",
+        "status": "unknown",
+        "allowed": [
+          "strong",
+          "adequate",
+          "short"
+        ]
+      }
+    }
+  },
+  {
+    "id": "dallas",
+    "name": "Dallas, TX",
+    "kind": "earth",
+    "state": "TX",
+    "lat": 32.78,
+    "lng": -96.8,
+    "has_parcels": false,
+    "electricity_price": {
+      "value": 0.0721,
+      "unit": "USD_per_kWh",
+      "scope": "TX statewide industrial-sector average, not a data-center tariff",
+      "status": "observed",
+      "source": "EIA Electric Power Monthly, Table 5.6.A (industrial sector)",
+      "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+      "period": "2026-08 (preliminary)",
+      "retrieved": "2026-11-13"
+    },
+    "construction_cost": {
+      "value": 10.51,
+      "unit": "USD_per_W_IT",
+      "scope": "Dallas benchmark; ~60 MW air-cooled build-to-suit; EXCLUDES land, utility works, site works, IT equipment, fees",
+      "status": "observed",
+      "source": "Turner & Townsend Data Centre Construction Cost Index 2026-27",
+      "source_url": "https://www.turnerandtownsend.com/news/surging-demand-for-ai-drives-race-to-deliver-data-centre-mega-projects/",
+      "period": "2026-27",
+      "retrieved": "2026-11-13"
+    },
+    "cooling": {
+      "water": {
+        "pue": {
+          "value": 1.2,
+          "unit": "ratio",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        },
+        "wue": {
+          "value": 0.2,
+          "unit": "L_per_IT_kWh",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        }
+      },
+      "dry": {
+        "pue": {
+          "value": null,
+          "unit": "ratio",
+          "status": "unknown"
+        },
+        "wue": {
+          "value": null,
+          "unit": "L_per_IT_kWh",
+          "status": "unknown"
+        }
+      }
+    },
+    "grid_wait": {
+      "value": null,
+      "unit": "years",
+      "status": "unknown",
+      "scope": "Time to receive utility power for a new large load",
+      "note": "Berkeley Lab queue data covers generators, not loads; do not substitute."
+    },
+    "risk_inputs": {
+      "water_stress": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown",
+        "source": "WRI Aqueduct 4.0 (not yet extracted)"
+      },
+      "crowding_count": {
+        "value": null,
+        "unit": "count",
+        "status": "unknown",
+        "source": "Epoch AI Frontier Data Centers (not yet pulled)"
+      },
+      "opposition": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown"
+      },
+      "labor": {
+        "value": null,
+        "unit": "category",
+        "status": "unknown",
+        "allowed": [
+          "strong",
+          "adequate",
+          "short"
+        ]
+      }
+    }
+  },
+  {
+    "id": "northern-virginia",
+    "name": "Northern Virginia",
+    "kind": "earth",
+    "state": "VA",
+    "lat": 39.04,
+    "lng": -77.49,
+    "has_parcels": false,
+    "electricity_price": {
+      "value": 0.0998,
+      "unit": "USD_per_kWh",
+      "scope": "VA statewide industrial-sector average, not a data-center tariff",
+      "status": "observed",
+      "source": "EIA Electric Power Monthly, Table 5.6.A (industrial sector)",
+      "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+      "period": "2026-08 (preliminary)",
+      "retrieved": "2026-11-13"
+    },
+    "construction_cost": {
+      "value": 11.8,
+      "unit": "USD_per_W_IT",
+      "scope": "North Virginia benchmark; ~60 MW air-cooled build-to-suit; EXCLUDES land, utility works, site works, IT equipment, fees",
+      "status": "observed",
+      "source": "Turner & Townsend Data Centre Construction Cost Index 2026-27",
+      "source_url": "https://www.turnerandtownsend.com/news/surging-demand-for-ai-drives-race-to-deliver-data-centre-mega-projects/",
+      "period": "2026-27",
+      "retrieved": "2026-11-13"
+    },
+    "cooling": {
+      "water": {
+        "pue": {
+          "value": 1.2,
+          "unit": "ratio",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        },
+        "wue": {
+          "value": 0.2,
+          "unit": "L_per_IT_kWh",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        }
+      },
+      "dry": {
+        "pue": {
+          "value": null,
+          "unit": "ratio",
+          "status": "unknown"
+        },
+        "wue": {
+          "value": null,
+          "unit": "L_per_IT_kWh",
+          "status": "unknown"
+        }
+      }
+    },
+    "grid_wait": {
+      "value": null,
+      "unit": "years",
+      "status": "unknown",
+      "scope": "Time to receive utility power for a new large load",
+      "note": "Berkeley Lab queue data covers generators, not loads; do not substitute."
+    },
+    "risk_inputs": {
+      "water_stress": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown",
+        "source": "WRI Aqueduct 4.0 (not yet extracted)"
+      },
+      "crowding_count": {
+        "value": null,
+        "unit": "count",
+        "status": "unknown",
+        "source": "Epoch AI Frontier Data Centers (not yet pulled)"
+      },
+      "opposition": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown"
+      },
+      "labor": {
+        "value": null,
+        "unit": "category",
+        "status": "unknown",
+        "allowed": [
+          "strong",
+          "adequate",
+          "short"
+        ]
+      }
+    }
+  },
+  {
+    "id": "phoenix",
+    "name": "Phoenix, AZ",
+    "kind": "earth",
+    "state": "AZ",
+    "lat": 33.45,
+    "lng": -112.07,
+    "has_parcels": false,
+    "electricity_price": {
+      "value": 0.0973,
+      "unit": "USD_per_kWh",
+      "scope": "AZ statewide industrial-sector average, not a data-center tariff",
+      "status": "observed",
+      "source": "EIA Electric Power Monthly, Table 5.6.A (industrial sector)",
+      "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+      "period": "2026-08 (preliminary)",
+      "retrieved": "2026-11-13"
+    },
+    "construction_cost": {
+      "value": 11.05,
+      "unit": "USD_per_W_IT",
+      "scope": "Phoenix benchmark; ~60 MW air-cooled build-to-suit; EXCLUDES land, utility works, site works, IT equipment, fees",
+      "status": "observed",
+      "source": "Turner & Townsend Data Centre Construction Cost Index 2026-27",
+      "source_url": "https://www.turnerandtownsend.com/news/surging-demand-for-ai-drives-race-to-deliver-data-centre-mega-projects/",
+      "period": "2026-27",
+      "retrieved": "2026-11-13"
+    },
+    "cooling": {
+      "water": {
+        "pue": {
+          "value": 1.2,
+          "unit": "ratio",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        },
+        "wue": {
+          "value": 0.2,
+          "unit": "L_per_IT_kWh",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        }
+      },
+      "dry": {
+        "pue": {
+          "value": null,
+          "unit": "ratio",
+          "status": "unknown"
+        },
+        "wue": {
+          "value": null,
+          "unit": "L_per_IT_kWh",
+          "status": "unknown"
+        }
+      }
+    },
+    "grid_wait": {
+      "value": null,
+      "unit": "years",
+      "status": "unknown",
+      "scope": "Time to receive utility power for a new large load",
+      "note": "Berkeley Lab queue data covers generators, not loads; do not substitute."
+    },
+    "risk_inputs": {
+      "water_stress": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown",
+        "source": "WRI Aqueduct 4.0 (not yet extracted)"
+      },
+      "crowding_count": {
+        "value": null,
+        "unit": "count",
+        "status": "unknown",
+        "source": "Epoch AI Frontier Data Centers (not yet pulled)"
+      },
+      "opposition": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown"
+      },
+      "labor": {
+        "value": null,
+        "unit": "category",
+        "status": "unknown",
+        "allowed": [
+          "strong",
+          "adequate",
+          "short"
+        ]
+      }
+    }
+  },
+  {
+    "id": "atlanta",
+    "name": "Atlanta, GA",
+    "kind": "earth",
+    "state": "GA",
+    "lat": 33.75,
+    "lng": -84.39,
+    "has_parcels": false,
+    "electricity_price": {
+      "value": 0.1305,
+      "unit": "USD_per_kWh",
+      "scope": "GA statewide industrial-sector average, not a data-center tariff",
+      "status": "observed",
+      "source": "EIA Electric Power Monthly, Table 5.6.A (industrial sector)",
+      "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+      "period": "2026-08 (preliminary)",
+      "retrieved": "2026-11-13"
+    },
+    "construction_cost": {
+      "value": 10.91,
+      "unit": "USD_per_W_IT",
+      "scope": "Atlanta benchmark; ~60 MW air-cooled build-to-suit; EXCLUDES land, utility works, site works, IT equipment, fees",
+      "status": "observed",
+      "source": "Turner & Townsend Data Centre Construction Cost Index 2026-27",
+      "source_url": "https://www.turnerandtownsend.com/news/surging-demand-for-ai-drives-race-to-deliver-data-centre-mega-projects/",
+      "period": "2026-27",
+      "retrieved": "2026-11-13"
+    },
+    "cooling": {
+      "water": {
+        "pue": {
+          "value": 1.2,
+          "unit": "ratio",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        },
+        "wue": {
+          "value": 0.2,
+          "unit": "L_per_IT_kWh",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        }
+      },
+      "dry": {
+        "pue": {
+          "value": null,
+          "unit": "ratio",
+          "status": "unknown"
+        },
+        "wue": {
+          "value": null,
+          "unit": "L_per_IT_kWh",
+          "status": "unknown"
+        }
+      }
+    },
+    "grid_wait": {
+      "value": null,
+      "unit": "years",
+      "status": "unknown",
+      "scope": "Time to receive utility power for a new large load",
+      "note": "Berkeley Lab queue data covers generators, not loads; do not substitute."
+    },
+    "risk_inputs": {
+      "water_stress": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown",
+        "source": "WRI Aqueduct 4.0 (not yet extracted)"
+      },
+      "crowding_count": {
+        "value": null,
+        "unit": "count",
+        "status": "unknown",
+        "source": "Epoch AI Frontier Data Centers (not yet pulled)"
+      },
+      "opposition": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown"
+      },
+      "labor": {
+        "value": null,
+        "unit": "category",
+        "status": "unknown",
+        "allowed": [
+          "strong",
+          "adequate",
+          "short"
+        ]
+      }
+    }
+  },
+  {
+    "id": "columbus",
+    "name": "Columbus, OH",
+    "kind": "earth",
+    "state": "OH",
+    "lat": 39.96,
+    "lng": -83.0,
+    "has_parcels": false,
+    "electricity_price": {
+      "value": 0.0975,
+      "unit": "USD_per_kWh",
+      "scope": "OH statewide industrial-sector average, not a data-center tariff",
+      "status": "observed",
+      "source": "EIA Electric Power Monthly, Table 5.6.A (industrial sector)",
+      "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+      "period": "2026-08 (preliminary)",
+      "retrieved": "2026-11-13"
+    },
+    "construction_cost": {
+      "value": 11.71,
+      "unit": "USD_per_W_IT",
+      "scope": "Columbus benchmark; ~60 MW air-cooled build-to-suit; EXCLUDES land, utility works, site works, IT equipment, fees",
+      "status": "observed",
+      "source": "Turner & Townsend Data Centre Construction Cost Index 2026-27",
+      "source_url": "https://www.turnerandtownsend.com/news/surging-demand-for-ai-drives-race-to-deliver-data-centre-mega-projects/",
+      "period": "2026-27",
+      "retrieved": "2026-11-13"
+    },
+    "cooling": {
+      "water": {
+        "pue": {
+          "value": 1.2,
+          "unit": "ratio",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        },
+        "wue": {
+          "value": 0.2,
+          "unit": "L_per_IT_kWh",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        }
+      },
+      "dry": {
+        "pue": {
+          "value": null,
+          "unit": "ratio",
+          "status": "unknown"
+        },
+        "wue": {
+          "value": null,
+          "unit": "L_per_IT_kWh",
+          "status": "unknown"
+        }
+      }
+    },
+    "grid_wait": {
+      "value": null,
+      "unit": "years",
+      "status": "unknown",
+      "scope": "Time to receive utility power for a new large load",
+      "note": "Berkeley Lab queue data covers generators, not loads; do not substitute."
+    },
+    "risk_inputs": {
+      "water_stress": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown",
+        "source": "WRI Aqueduct 4.0 (not yet extracted)"
+      },
+      "crowding_count": {
+        "value": null,
+        "unit": "count",
+        "status": "unknown",
+        "source": "Epoch AI Frontier Data Centers (not yet pulled)"
+      },
+      "opposition": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown"
+      },
+      "labor": {
+        "value": null,
+        "unit": "category",
+        "status": "unknown",
+        "allowed": [
+          "strong",
+          "adequate",
+          "short"
+        ]
+      }
+    }
+  },
+  {
+    "id": "new-jersey",
+    "name": "New Jersey",
+    "kind": "earth",
+    "state": "NJ",
+    "lat": 40.22,
+    "lng": -74.76,
+    "has_parcels": false,
+    "electricity_price": {
+      "value": 0.1624,
+      "unit": "USD_per_kWh",
+      "scope": "NJ statewide industrial-sector average, not a data-center tariff",
+      "status": "observed",
+      "source": "EIA Electric Power Monthly, Table 5.6.A (industrial sector)",
+      "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a",
+      "period": "2026-08 (preliminary)",
+      "retrieved": "2026-11-13"
+    },
+    "construction_cost": {
+      "value": 14.22,
+      "unit": "USD_per_W_IT",
+      "scope": "New Jersey benchmark; ~60 MW air-cooled build-to-suit; EXCLUDES land, utility works, site works, IT equipment, fees",
+      "status": "observed",
+      "source": "Turner & Townsend Data Centre Construction Cost Index 2026-27",
+      "source_url": "https://www.turnerandtownsend.com/news/surging-demand-for-ai-drives-race-to-deliver-data-centre-mega-projects/",
+      "period": "2026-27",
+      "retrieved": "2026-11-13"
+    },
+    "cooling": {
+      "water": {
+        "pue": {
+          "value": 1.2,
+          "unit": "ratio",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        },
+        "wue": {
+          "value": 0.2,
+          "unit": "L_per_IT_kWh",
+          "scope": "Team reference scenario",
+          "status": "assumption"
+        }
+      },
+      "dry": {
+        "pue": {
+          "value": null,
+          "unit": "ratio",
+          "status": "unknown"
+        },
+        "wue": {
+          "value": null,
+          "unit": "L_per_IT_kWh",
+          "status": "unknown"
+        }
+      }
+    },
+    "grid_wait": {
+      "value": null,
+      "unit": "years",
+      "status": "unknown",
+      "scope": "Time to receive utility power for a new large load",
+      "note": "Berkeley Lab queue data covers generators, not loads; do not substitute."
+    },
+    "risk_inputs": {
+      "water_stress": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown",
+        "source": "WRI Aqueduct 4.0 (not yet extracted)"
+      },
+      "crowding_count": {
+        "value": null,
+        "unit": "count",
+        "status": "unknown",
+        "source": "Epoch AI Frontier Data Centers (not yet pulled)"
+      },
+      "opposition": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown"
+      },
+      "labor": {
+        "value": null,
+        "unit": "category",
+        "status": "unknown",
+        "allowed": [
+          "strong",
+          "adequate",
+          "short"
+        ]
+      }
+    }
+  },
+  {
+    "id": "orbit",
+    "name": "Low Earth Orbit",
+    "kind": "orbit",
+    "state": null,
+    "lat": 0,
+    "lng": 0,
+    "has_parcels": false,
+    "electricity_price": {
+      "value": 0,
+      "unit": "USD_per_kWh",
+      "scope": "On-board solar; cost is in hardware + launch",
+      "status": "assumption"
+    },
+    "construction_cost": {
+      "value": null,
+      "unit": "USD_per_W_IT",
+      "status": "unknown",
+      "note": "Model lane computes from launch mass x launch cost"
+    },
+    "cooling": {
+      "radiative": {
+        "pue": {
+          "value": null,
+          "unit": "ratio",
+          "status": "unknown"
+        },
+        "wue": {
+          "value": 0,
+          "unit": "L_per_IT_kWh",
+          "scope": "No water in orbit",
+          "status": "assumption"
+        }
+      }
+    },
+    "grid_wait": {
+      "value": null,
+      "unit": "years",
+      "status": "unknown",
+      "note": "Model lane states earliest realistic availability as an assumption"
+    },
+    "risk_inputs": {
+      "water_stress": {
+        "value": 0,
+        "unit": "score_0_100",
+        "scope": "No water use",
+        "status": "assumption"
+      },
+      "crowding_count": {
+        "value": null,
+        "unit": "count",
+        "status": "unknown"
+      },
+      "opposition": {
+        "value": null,
+        "unit": "score_0_100",
+        "status": "unknown"
+      },
+      "labor": {
+        "value": null,
+        "unit": "category",
+        "status": "unknown",
+        "allowed": [
+          "strong",
+          "adequate",
+          "short"
+        ]
+      }
+    }
+  }
+]
