@@ -1,0 +1,22 @@
+{
+  "_mock": "Placeholder values. Not real data.",
+  "id": "hou-001",
+  "region_id": "houston",
+  "address": "4200 Industrial Pkwy, Baytown, TX",
+  "lat": 29.77,
+  "lng": -94.98,
+  "acres": 62,
+  "asking_price_per_acre": 145000,
+  "image_url": "",
+  "checks": [
+    { "name": "size", "status": "pass", "text": "Large enough for 100 MW." },
+    { "name": "neighbors", "status": "warn", "text": "Homes 400 ft away." },
+    { "name": "flood", "status": "pass", "text": "Above surrounding terrain." },
+    { "name": "power", "status": "pass", "text": "Substation 0.8 mi." }
+  ],
+  "verdict": "buy",
+  "max_price_per_acre": 210000,
+  "reason": "Buy up to $210,000 per acre. Above that, the next-best site is the better deal.",
+  "matterport_model_id": null,
+  "sources": ["CoStar", "Vexcel Elements", "Vexcel Elevation"]
+}

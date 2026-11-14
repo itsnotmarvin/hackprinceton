@@ -1,0 +1,13 @@
+{
+  "items": [
+    {
+      "kind": "parcel",
+      "id": "hou-001",
+      "name": "Baytown industrial tract",
+      "current": { "verdict": "buy", "score": 82 },
+      "changes": [
+        { "date": "2026-11-14", "text": "Power prices rose 6%. Max price dropped to $210,000 per acre.", "direction": "worse" }
+      ]
+    }
+  ]
+}

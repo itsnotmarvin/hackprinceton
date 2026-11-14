@@ -1,0 +1,25 @@
+{
+  "_mock": "Placeholder values. Not real data.",
+  "id": "houston",
+  "name": "Houston, TX",
+  "score": 82,
+  "breakdown": {
+    "build_cost_usd": 1150000000,
+    "annual_operating_cost_usd": 72000000,
+    "facility_power_mw": 130,
+    "cooling_load_mw": 100,
+    "annual_water_liters": 1640000000,
+    "water_household_equivalent": 4500,
+    "annual_energy_mwh": 911000
+  },
+  "risk_notes": [
+    { "factor": "crowding", "text": "9 projects already planned here." },
+    { "factor": "grid", "text": "Typical interconnection wait is about 2.5 years." },
+    { "factor": "water", "text": "Medium-high water stress in summer months." },
+    { "factor": "labor", "text": "Strong pool of electricians and construction trades." }
+  ],
+  "parcels": [
+    { "id": "hou-001", "name": "Baytown industrial tract", "verdict": "buy", "lat": 29.77, "lng": -94.98 },
+    { "id": "hou-002", "name": "Pasadena rail-side lot", "verdict": "maybe", "lat": 29.69, "lng": -95.16 }
+  ]
+}

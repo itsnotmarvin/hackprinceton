@@ -1,0 +1,17 @@
+{
+  "options": [
+    { "id": "houston", "name": "Houston, TX", "kind": "earth", "lat": 29.76, "lng": -95.37, "score": 82, "rank": 1,
+      "cost_per_mw_year": 1180000, "time_to_power_years": 2.5,
+      "risk": { "water": 55, "grid": 40, "crowding": 35, "opposition": 20, "overall": 38 },
+      "labor": "strong", "reason": "Cheap power, moderate grid wait.", "badges": ["Lowest cost"], "has_parcels": true },
+    { "id": "orbit", "name": "Low Earth Orbit", "kind": "orbit", "lat": 0, "lng": 0, "score": 61, "rank": 2,
+      "cost_per_mw_year": 1650000, "time_to_power_years": 5.0,
+      "risk": { "water": 0, "grid": 0, "crowding": 5, "opposition": 0, "overall": 30 },
+      "labor": "adequate", "reason": "No water or grid limits; launch cost dominates.", "badges": ["Zero water"], "has_parcels": false },
+    { "id": "los-angeles", "name": "Los Angeles, CA", "kind": "earth", "lat": 34.05, "lng": -118.24, "score": 54, "rank": 3,
+      "cost_per_mw_year": 1720000, "time_to_power_years": 4.0,
+      "risk": { "water": 80, "grid": 65, "crowding": 50, "opposition": 60, "overall": 64 },
+      "labor": "adequate", "reason": "Expensive power and high water stress.", "badges": [], "has_parcels": true }
+  ],
+  "break_even": { "versus_id": "houston", "launch_cost_per_kg": 410, "text": "Orbit beats Houston below $410 per kg." }
+}

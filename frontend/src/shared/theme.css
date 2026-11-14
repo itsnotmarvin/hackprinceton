@@ -1,0 +1,118 @@
+/* SHARED design tokens + base styles. Both frontend lanes use these. */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --surface-2: #f0f2f5;
+  --border: #e2e5ea;
+  --text: #16191f;
+  --text-2: #5b6470;
+  --accent: #2b5cff;
+  --accent-soft: #e8eeff;
+
+  --buy: #12805c;
+  --buy-soft: #e3f5ee;
+  --maybe: #b26b00;
+  --maybe-soft: #fdf1dc;
+  --pass: #c4314b;
+  --pass-soft: #fbe6ea;
+
+  --orbit: #6b3fd4;
+  --orbit-soft: #efe9fc;
+
+  --radius: 12px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 1px 3px rgba(16, 24, 40, 0.08);
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { margin: 0; min-height: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3 { line-height: 1.2; margin: 0; }
+h1 { font-size: 28px; font-weight: 700; }
+h2 { font-size: 18px; font-weight: 650; }
+h3 { font-size: 15px; font-weight: 600; }
+
+button { font: inherit; cursor: pointer; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+}
+
+.muted { color: var(--text-2); }
+.small { font-size: 13px; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid var(--border); background: var(--surface); color: var(--text);
+  padding: 8px 14px; border-radius: var(--radius-sm); font-weight: 550;
+}
+.btn:hover { background: var(--surface-2); }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn-primary:hover { background: #1f49d6; }
+.btn:disabled { opacity: 0.6; cursor: default; }
+
+/* layout shell */
+.shell-header {
+  position: sticky; top: 0; z-index: 10;
+  background: var(--surface); border-bottom: 1px solid var(--border);
+}
+.shell-header-inner {
+  max-width: 1200px; margin: 0 auto; padding: 12px 24px;
+  display: flex; align-items: center; gap: 24px;
+}
+.brand { font-weight: 750; font-size: 17px; color: var(--text); }
+.brand:hover { text-decoration: none; }
+.shell-nav { display: flex; gap: 18px; margin-left: auto; align-items: center; }
+.shell-nav a { color: var(--text-2); font-weight: 550; }
+.shell-nav a.active { color: var(--text); }
+.mock-pill {
+  font-size: 11px; font-weight: 650; letter-spacing: 0.04em; text-transform: uppercase;
+  background: var(--maybe-soft); color: var(--maybe); padding: 3px 8px; border-radius: 99px;
+}
+.shell-main { max-width: 1200px; margin: 0 auto; padding: 28px 24px 64px; }
+
+/* verdict badge */
+.verdict {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-weight: 700; border-radius: 99px; padding: 3px 10px; font-size: 13px;
+}
+.verdict-lg { font-size: 22px; padding: 8px 20px; }
+.verdict-buy { background: var(--buy-soft); color: var(--buy); }
+.verdict-maybe { background: var(--maybe-soft); color: var(--maybe); }
+.verdict-pass { background: var(--pass-soft); color: var(--pass); }
+
+/* heart */
+.heart {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  border: 1px solid var(--border); background: var(--surface);
+  border-radius: 99px; padding: 6px 12px; color: var(--text-2); font-weight: 550;
+}
+.heart.on { color: var(--pass); border-color: var(--pass-soft); background: var(--pass-soft); }
+.heart svg { width: 18px; height: 18px; }
+
+/* status / loading */
+.state { padding: 48px 0; text-align: center; color: var(--text-2); }
+.spinner {
+  width: 22px; height: 22px; border-radius: 50%;
+  border: 3px solid var(--border); border-top-color: var(--accent);
+  animation: spin 0.8s linear infinite; display: inline-block; vertical-align: middle;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

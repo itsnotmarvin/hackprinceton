@@ -1,0 +1,24 @@
+{
+  "_mock": "Placeholder values. Not real data.",
+  "id": "orbit",
+  "name": "Low Earth Orbit",
+  "score": 61,
+  "breakdown": {
+    "build_cost_usd": 2100000000,
+    "annual_operating_cost_usd": 15000000,
+    "facility_power_mw": 100,
+    "cooling_load_mw": 100,
+    "annual_water_liters": 0,
+    "water_household_equivalent": 0,
+    "annual_energy_mwh": 876000,
+    "solar_array_m2": 340000,
+    "radiator_m2": 210000,
+    "launch_mass_kg": 2600000,
+    "launch_cost_usd": 3900000000
+  },
+  "risk_notes": [
+    { "factor": "grid", "text": "No grid connection needed; power is solar." },
+    { "factor": "crowding", "text": "Launch capacity, not land, is the bottleneck." }
+  ],
+  "parcels": []
+}
