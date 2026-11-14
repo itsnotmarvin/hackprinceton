@@ -1,0 +1,19 @@
+{
+  "_mock": "Hand-written mock report. Not real research.",
+  "report_id": "mock-hou-001",
+  "status": "done",
+  "site": { "kind": "parcel", "id": "hou-001", "name": "Baytown industrial tract" },
+  "summary": "Buy, up to $210,000 per acre. Power is cheap and the grid wait is manageable; the main risk is homes 400 ft to the east.",
+  "sections": [
+    { "topic": "power", "finding": "Industrial power averages about 6.8 cents/kWh; the substation is 0.8 mi away.", "risk": "low",
+      "sources": [{ "title": "EIA Electric Power Monthly (example)", "url": "https://www.eia.gov/electricity/monthly/" }] },
+    { "topic": "water", "finding": "Medium-high summer water stress; dry cooling would cut water use but raise PUE.", "risk": "medium",
+      "sources": [{ "title": "WRI Aqueduct (example)", "url": "https://www.wri.org/aqueduct" }] },
+    { "topic": "land", "finding": "62 acres, above surrounding terrain, zoned industrial.", "risk": "low",
+      "sources": [{ "title": "CoStar listing (example)", "url": "https://www.costar.com/" }] },
+    { "topic": "community", "finding": "No active moratorium; one neighborhood group has raised noise concerns.", "risk": "medium",
+      "sources": [{ "title": "Data Center Watch (example)", "url": "https://www.datacenterwatch.org/" }] }
+  ],
+  "changes_since_last": ["Power prices rose 6% since the last report."],
+  "generated_at": "2026-11-14T00:00:00Z"
+}

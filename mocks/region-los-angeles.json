@@ -1,0 +1,23 @@
+{
+  "_mock": "Placeholder values. Not real data.",
+  "id": "los-angeles",
+  "name": "Los Angeles, CA",
+  "score": 54,
+  "breakdown": {
+    "build_cost_usd": 1320000000,
+    "annual_operating_cost_usd": 118000000,
+    "facility_power_mw": 125,
+    "cooling_load_mw": 100,
+    "annual_water_liters": 1420000000,
+    "water_household_equivalent": 3900,
+    "annual_energy_mwh": 876000
+  },
+  "risk_notes": [
+    { "factor": "water", "text": "Extremely high water stress; new restrictions likely." },
+    { "factor": "grid", "text": "Interconnection queue is about 4 years." },
+    { "factor": "opposition", "text": "Two projects delayed by local opposition since 2024." }
+  ],
+  "parcels": [
+    { "id": "la-001", "name": "Vernon warehouse block", "verdict": "pass", "lat": 34.0, "lng": -118.21 }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "_mock": "Placeholder values. Not real data.",
+  "id": "hou-002",
+  "region_id": "houston",
+  "address": "900 Rail Spur Rd, Pasadena, TX",
+  "lat": 29.69,
+  "lng": -95.16,
+  "acres": 38,
+  "asking_price_per_acre": 240000,
+  "image_url": "",
+  "checks": [
+    { "name": "size", "status": "warn", "text": "Tight for 100 MW; no room to expand." },
+    { "name": "neighbors", "status": "pass", "text": "Nearest home 0.6 mi away." },
+    { "name": "flood", "status": "pass", "text": "Above surrounding terrain." },
+    { "name": "power", "status": "pass", "text": "Substation 1.4 mi." }
+  ],
+  "verdict": "maybe",
+  "max_price_per_acre": 190000,
+  "reason": "Maybe: the asking price is above the $190,000 per acre this site is worth.",
+  "matterport_model_id": null,
+  "sources": ["CoStar", "Vexcel Elements", "Vexcel Elevation"]
+}
