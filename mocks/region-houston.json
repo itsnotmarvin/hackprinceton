@@ -1,0 +1,19 @@
+{
+  "id": "houston",
+  "name": "Houston, TX",
+  "breakdown": {
+    "build_cost_usd": 1000000000,
+    "annual_operating_cost_usd": 80000000,
+    "facility_power_mw": 130,
+    "cooling_load_mw": 100,
+    "annual_water_liters": 500000000,
+    "water_household_equivalent": 4000,
+    "annual_energy_mwh": 1000000
+  },
+  "risk_notes": [
+    { "factor": "crowding", "text": "9 projects already planned here." }
+  ],
+  "parcels": [
+    { "id": "hou-001", "name": "Example parcel (Houston)", "verdict": "buy", "lat": 29.8, "lng": -95.4 }
+  ]
+}

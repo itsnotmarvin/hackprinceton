@@ -1,0 +1,19 @@
+{
+  "id": "los-angeles",
+  "name": "Los Angeles, CA",
+  "breakdown": {
+    "build_cost_usd": 1400000000,
+    "annual_operating_cost_usd": 130000000,
+    "facility_power_mw": 125,
+    "cooling_load_mw": 100,
+    "annual_water_liters": 200000000,
+    "water_household_equivalent": 1600,
+    "annual_energy_mwh": 950000
+  },
+  "risk_notes": [
+    { "factor": "opposition", "text": "Local restrictions on new large loads." }
+  ],
+  "parcels": [
+    { "id": "la-001", "name": "Example parcel (LA)", "verdict": "pass", "lat": 34.0, "lng": -118.2 }
+  ]
+}

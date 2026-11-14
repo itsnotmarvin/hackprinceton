@@ -1,0 +1,21 @@
+{
+  "id": "la-001",
+  "region_id": "los-angeles",
+  "address": "PLACEHOLDER, Los Angeles, CA",
+  "lat": 34.0,
+  "lng": -118.2,
+  "acres": 40,
+  "asking_price_per_acre": 600000,
+  "image_url": "/static/placeholder.jpg",
+  "checks": [
+    { "name": "size", "status": "warn", "text": "Tight for 100 MW." },
+    { "name": "neighbors", "status": "fail", "text": "Homes 100 ft away." },
+    { "name": "flood", "status": "pass", "text": "Above surrounding terrain." },
+    { "name": "power", "status": "warn", "text": "Substation 2.5 mi." }
+  ],
+  "verdict": "pass",
+  "max_price_per_acre": 200000,
+  "reason": "Pass. Asking price is well above the $200,000 per acre this site is worth.",
+  "matterport_model_id": null,
+  "sources": ["CoStar", "Vexcel Elements", "Vexcel Elevation"]
+}

@@ -1,0 +1,16 @@
+{
+  "report_id": "demo-hou-001",
+  "status": "done",
+  "site": { "kind": "parcel", "id": "hou-001", "name": "Example parcel (Houston)" },
+  "summary": "PLACEHOLDER. Buy up to $120,000 per acre. Power and land check out; community opposition is the main open risk.",
+  "sections": [
+    {
+      "topic": "community",
+      "finding": "PLACEHOLDER finding about local opposition.",
+      "risk": "medium",
+      "sources": [{ "title": "Example source", "url": "https://example.com" }]
+    }
+  ],
+  "changes_since_last": ["PLACEHOLDER: power prices rose 6%."],
+  "generated_at": "2026-11-14T00:00:00Z"
+}

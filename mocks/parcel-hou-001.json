@@ -1,0 +1,21 @@
+{
+  "id": "hou-001",
+  "region_id": "houston",
+  "address": "PLACEHOLDER, Houston, TX",
+  "lat": 29.8,
+  "lng": -95.4,
+  "acres": 120,
+  "asking_price_per_acre": 90000,
+  "image_url": "/static/placeholder.jpg",
+  "checks": [
+    { "name": "size", "status": "pass", "text": "Large enough for 100 MW." },
+    { "name": "neighbors", "status": "warn", "text": "Homes 400 ft away." },
+    { "name": "flood", "status": "pass", "text": "Above surrounding terrain." },
+    { "name": "power", "status": "pass", "text": "Substation 0.8 mi." }
+  ],
+  "verdict": "buy",
+  "max_price_per_acre": 120000,
+  "reason": "Buy up to $120,000 per acre. Above that, the next-best site is the better deal.",
+  "matterport_model_id": null,
+  "sources": ["CoStar", "Vexcel Elements", "Vexcel Elevation"]
+}
